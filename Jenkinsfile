@@ -14,12 +14,12 @@ pipeline {
 	}
 	stage('build') {
 		steps{
-			echo 'hello build'
+			sh './gradlew clean test jar'
 		}
 	}
 	stage('results'){
 		steps{
-			echo 'hello results'
+			**/build/test-results/test/TEST-*.xml
 		}
 	}
 
