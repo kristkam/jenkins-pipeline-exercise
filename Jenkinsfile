@@ -19,7 +19,7 @@ pipeline {
 	}
 	stage('results'){
 		steps{
-			**/build/test-results/test/TEST-*.xml
+			junit '**/build/test-results/test/TEST-*.xml'
 		}
 	}
 
